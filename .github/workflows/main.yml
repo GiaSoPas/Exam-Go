@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: my-docker-hub-namespace/my-docker-hub-repository
+          images: giasopas/piumossov
       
       - name: Build and push Docker imagee
         uses: docker/build-push-action@v2
