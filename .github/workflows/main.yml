@@ -55,7 +55,7 @@ jobs:
            
       - name: Deploy
         run : |
-            zip -r deployment.zip hey
+            zip -r deployment.zip hey/Dockerrun.aws.json
             aws s3 cp deployment.zip s3://go-app-eb
             aws elasticbeanstalk create-application-version --application-name goapp \
                 --version-label ${{ github.sha }} --source-bundle S3Bucket="go-app-eb",S3Key="deployment.zip"
