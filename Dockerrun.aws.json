@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "3",
     "Image": {
-      "Name": "giasopas/piumossov",
+      "Name": "giasopas/piumossov:main",
       "Update": "true"
     },
     "Ports": [
