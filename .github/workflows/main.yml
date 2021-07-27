@@ -55,7 +55,7 @@ jobs:
            
       - name: Deploy
         run : |
-            zip -r deployment-${{ github.sha }}.zip Dockerrun.aws.json
+            zip -p deployment-${{ github.sha }}.zip -r Dockerrun.aws.json
             sleep 2s
             aws s3 cp deployment-${{ github.sha }}.zip s3://go-app-eb
             aws elasticbeanstalk create-application-version --application-name goapp \
