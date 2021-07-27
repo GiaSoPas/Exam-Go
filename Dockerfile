@@ -10,4 +10,5 @@ USER appuser
 COPY --from=0 /build/helloworld /app/
 COPY views/ /app/views
 WORKDIR /app
+EXPOSE 3000
 CMD ["./helloworld"]
