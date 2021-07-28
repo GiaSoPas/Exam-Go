@@ -7,7 +7,7 @@ import (
 )
 
 func HelloWorld(c *gin.Context) {
-	c.String(200, "Hello, Worldd!sheewshhh")
+	c.String(200, "Hello, Worlddds!sheewshhh")
 }
 
 func main() {
