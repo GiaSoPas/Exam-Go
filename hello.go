@@ -6,12 +6,14 @@ import (
     "github.com/gin-gonic/gin"
 )
 
+func HelloWorld(c *gin.Context) {
+	c.String(200, "Hello, Worldd!sheewshhh")
+}
+
 func main() {
 	r := gin.Default()
 
-	r.GET("/hello", func(c *gin.Context) {
-		c.String(200, "Hello, Worldd!sheewshhh")
-	})
+	r.GET("/hello", HelloWorld)
 
 	api := r.Group("/api")
 
