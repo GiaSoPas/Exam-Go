@@ -25,6 +25,6 @@ func main() {
 	err := r.Run(":3000")
 	
 	if err != nil {
-		fmt.Print("linter, dont move!!)
+		fmt.Print("linter, dont move!!")
 	}
 }
