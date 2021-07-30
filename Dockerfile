@@ -7,8 +7,8 @@ RUN go build
 FROM alpine
 RUN adduser -S -D -H -h /app appuser
 USER appuser
-COPY --from=0 /build/helloworld /app/
+COPY --from=0 /build/hello /app/
 COPY views/ /app/views
 WORKDIR /app
 EXPOSE 3000
-CMD ["./helloworld"]
+CMD ["./hello"]
