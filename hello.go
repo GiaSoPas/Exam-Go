@@ -13,7 +13,7 @@ func HelloWorld(c *gin.Context) {
 func main() {
 	r := gin.Default()
 
-	r.GET("/hello", HelloWorld)
+	r.GET("/", HelloWorld)
 
 	api := r.Group("/api")
 
@@ -23,7 +23,7 @@ func main() {
 		})
 	})
 
-	r.Use(static.Serve("/", static.LocalFile("./views", true)))
+	r.Use(static.Serve("/hello", static.LocalFile("./views", true)))
 
 	err := r.Run(":3000")
 	
