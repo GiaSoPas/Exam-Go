@@ -7,7 +7,7 @@ import (
 )
 
 func HelloWorld(c *gin.Context) {
-	c.String(200, "Hello, Worlddd2!")
+	c.String(200, "Hello, Worlddd2!make change")
 }
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 		})
 	})
 
-	r.Use(static.Serve("/hello", static.LocalFile("./views", true)))
+	// r.Use(static.Serve("/hello", static.LocalFile("./views", true)))
 
 	err := r.Run(":3000")
 	
