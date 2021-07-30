@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    //"github.com/gin-gonic/contrib/static"
+    "github.com/gin-gonic/contrib/static"
     "github.com/gin-gonic/gin"
 )
 
@@ -23,7 +23,7 @@ func main() {
 		})
 	})
 
-	// r.Use(static.Serve("/hello", static.LocalFile("./views", true)))
+	r.Use(static.Serve("/hello", static.LocalFile("./views", true)))
 
 	err := r.Run(":3000")
 	
